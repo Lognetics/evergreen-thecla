@@ -61,8 +61,8 @@ export default function About() {
             <div className="absolute -left-4 -top-4 h-44 w-44 rounded-3xl bg-sage" />
             <div className="relative overflow-hidden rounded-3xl shadow-card">
               <img
-                src={portraits.about}
-                alt="Thecla A. Orakwe portrait"
+                src={portraits.notes}
+                alt="Thecla A. Orakwe at an event"
                 className="aspect-[4/5] w-full object-cover"
               />
             </div>

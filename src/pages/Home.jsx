@@ -57,7 +57,7 @@ export default function Home() {
             <div className="absolute -bottom-5 -right-5 h-32 w-32 rounded-3xl border-2 border-gold/40" />
             <div className="relative overflow-hidden rounded-3xl shadow-card">
               <img
-                src={portraits.about}
+                src={portraits.smile}
                 alt="Thecla A. Orakwe"
                 className="aspect-[4/5] w-full object-cover"
               />

@@ -11,6 +11,10 @@ export const portraits = {
   about: img("72c6a212-6bfd-49c3-a003-21eb9c9d393a.jpg"), // teal dress, pearls, smiling
   speaking: img("000aa61a-e57d-4b7d-b033-010f489953fb.jpg"), // pink, on mic
   feature: img("1341a484-d301-452f-b37d-d05efaebd53d.jpg"), // portrait
+  // Newer studio / event portraits (beige blazer set)
+  confident: img("thecla-confident.jpg"), // beige blazer, arms crossed, confident
+  smile: img("thecla-smile.jpg"), // beige blazer, warm smile
+  notes: img("thecla-notes.jpg"), // seated, taking notes at an event
 };
 
 // Signature event / stage / press shots (landscape)

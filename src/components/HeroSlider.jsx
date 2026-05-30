@@ -8,10 +8,17 @@ import { PlayBadge } from "./ui/VideoPlayer";
 
 const slides = [
   {
-    image: portraits.hero,
-    facet: "Public Speaker · Confidence Coach",
+    image: portraits.confident,
+    facet: "Speaker · Coach · Host",
     headline: "Find Your Voice.",
     text: "I help people speak with confidence and stand boldly in who they are — on stage, online and in life.",
+    align: "right",
+  },
+  {
+    image: portraits.hero,
+    facet: "Public Speaker · Confidence Coach",
+    headline: "Show Up Boldly.",
+    text: "Communication, confidence and creative expression — the tools to become the best version of you.",
     align: "right",
   },
   {
