@@ -101,28 +101,29 @@ export default function HeroSlider() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="mt-6 max-w-3xl font-display text-4xl font-semibold leading-[1.05] text-white sm:text-6xl lg:text-7xl"
+          className="mt-5 max-w-2xl font-display text-[2.5rem] font-semibold leading-[1.04] text-white sm:text-6xl"
         >
           Thecla Amarachukwu Orakwe
         </motion.h1>
 
-        {/* Rotating statement */}
-        <div className="mt-5 h-[5.5rem] sm:h-24">
+        {/* Rotating statement — min-height grows to fit so nothing overlaps */}
+        <div className="mt-4 flex min-h-[8.5rem] flex-col justify-start sm:min-h-[7.5rem]">
           <AnimatePresence mode="wait">
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 18 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -18 }}
-              transition={{ duration: 0.5 }}
+              exit={{ opacity: 0, y: -16 }}
+              transition={{ duration: 0.45 }}
+              className="max-w-xl"
             >
-              <span className="font-accent text-xs font-semibold uppercase tracking-[0.22em] text-brand-light">
+              <span className="font-accent text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-light">
                 {slide.facet}
               </span>
-              <p className="mt-2 font-display text-2xl italic text-gold sm:text-4xl">
+              <p className="mt-1.5 font-display text-2xl italic leading-tight text-gold sm:text-3xl">
                 {slide.headline}
               </p>
-              <p className="mt-2 max-w-xl text-sm leading-relaxed text-white/70 sm:text-base">
+              <p className="mt-2 text-sm leading-relaxed text-white/70 sm:text-[15px]">
                 {slide.text}
               </p>
             </motion.div>
@@ -134,7 +135,7 @@ export default function HeroSlider() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.45 }}
-          className="mt-10 flex flex-wrap items-center gap-3"
+          className="mt-7 flex flex-wrap items-center gap-3"
         >
           <Link to="/work-with-me" className="btn-gold">
             Work With Me <ArrowRight size={16} />
@@ -151,7 +152,7 @@ export default function HeroSlider() {
         </motion.div>
 
         {/* Controls */}
-        <div className="mt-12 flex items-center gap-5">
+        <div className="mt-9 flex items-center gap-5">
           <div className="flex gap-2">
             <button
               onClick={() => go(-1)}
