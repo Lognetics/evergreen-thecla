@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream font-body text-ink/80 antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-ink;
+  }
+  ::selection {
+    @apply bg-brand/20 text-brand-deep;
+  }
+}
+
+@layer components {
+  .container-px {
+    @apply mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12;
+  }
+  .eyebrow {
+    @apply font-accent text-xs font-semibold uppercase tracking-[0.28em] text-brand;
+  }
+  .eyebrow-gold {
+    @apply font-accent text-xs font-semibold uppercase tracking-[0.28em] text-gold;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-accent text-sm font-semibold tracking-wide transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/60;
+  }
+  .btn-primary {
+    @apply btn bg-emerald-gradient text-white shadow-soft hover:-translate-y-0.5 hover:shadow-glow;
+  }
+  .btn-gold {
+    @apply btn bg-gold text-ink shadow-[0_14px_40px_-18px_rgba(217,182,93,0.9)] hover:-translate-y-0.5 hover:bg-gold-soft;
+  }
+  .btn-outline {
+    @apply btn border border-white/40 text-white hover:border-gold hover:text-gold;
+  }
+  .btn-outline-dark {
+    @apply btn border border-brand/30 text-brand-deep hover:border-brand hover:bg-brand hover:text-white;
+  }
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-deep via-brand to-brand-light bg-clip-text text-transparent;
+  }
+  .card-elevate {
+    @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-card;
+  }
+  .glass {
+    @apply border border-white/15 bg-white/5 backdrop-blur-md;
+  }
+}
+
+/* Floating decorative blobs */
+.blob {
+  filter: blur(60px);
+  border-radius: 9999px;
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Hide scrollbar for carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Elegant divider line */
+.line-pattern {
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    rgba(217, 182, 93, 0.6),
+    transparent
+  );
+  height: 1px;
+}
