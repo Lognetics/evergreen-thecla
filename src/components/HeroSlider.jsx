@@ -101,7 +101,8 @@ export default function HeroSlider() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="mt-5 max-w-2xl font-display text-[2.5rem] font-semibold leading-[1.04] text-white sm:text-6xl"
+          style={{ fontSize: "clamp(1.4rem, 5.4vw, 4rem)" }}
+          className="mt-5 whitespace-nowrap font-display font-semibold leading-[1.05] tracking-tight text-white"
         >
           Thecla Amarachukwu Orakwe
         </motion.h1>
