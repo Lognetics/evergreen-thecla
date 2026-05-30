@@ -27,24 +27,24 @@ export default function Navbar() {
           : "py-5"
       }`}
     >
-      <nav className="container-px flex items-center justify-between">
-        <Link to="/" className="group flex items-center gap-2">
+      <nav className="container-px flex items-center justify-between gap-4">
+        <Link to="/" className="group flex shrink-0 items-center gap-2">
           <img
             src={scrolled ? logoDark : logoLight}
             alt="Evergreen Thecla"
             className={`w-auto transition-all duration-500 ${
-              scrolled ? "h-11" : "h-12 sm:h-14"
+              scrolled ? "h-10" : "h-11 sm:h-12"
             }`}
           />
         </Link>
 
-        <ul className="hidden items-center gap-1 xl:flex">
+        <ul className="hidden items-center lg:flex">
           {nav.map((item) => (
             <li key={item.to}>
               <NavLink
                 to={item.to}
                 className={({ isActive }) =>
-                  `relative rounded-full px-3.5 py-2 font-accent text-[13px] font-medium transition-colors ${
+                  `relative whitespace-nowrap rounded-full px-2.5 py-2 font-accent text-[13px] font-medium transition-colors xl:px-3 ${
                     isActive
                       ? scrolled
                         ? "text-brand"
@@ -57,11 +57,11 @@ export default function Navbar() {
               >
                 {({ isActive }) => (
                   <>
-                    {item.label}
+                    {item.short || item.label}
                     {isActive && (
                       <motion.span
                         layoutId="nav-underline"
-                        className={`absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full ${
+                        className={`absolute inset-x-2.5 -bottom-0.5 h-0.5 rounded-full ${
                           scrolled ? "bg-emerald-gradient" : "bg-gold"
                         }`}
                       />
@@ -73,13 +73,13 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden items-center gap-3 xl:flex">
+        <div className="hidden shrink-0 items-center lg:flex">
           <Link
             to="/contact"
             className={
               scrolled
-                ? "btn-primary px-5 py-2.5 text-[13px]"
-                : "btn-gold px-5 py-2.5 text-[13px]"
+                ? "btn-primary whitespace-nowrap px-4 py-2.5 text-[13px]"
+                : "btn-gold whitespace-nowrap px-4 py-2.5 text-[13px]"
             }
           >
             Book Me to Speak
@@ -88,7 +88,7 @@ export default function Navbar() {
 
         <button
           onClick={() => setOpen((v) => !v)}
-          className={`flex h-11 w-11 items-center justify-center rounded-full border transition-colors xl:hidden ${
+          className={`flex h-11 w-11 items-center justify-center rounded-full border transition-colors lg:hidden ${
             scrolled ? "border-ink/10 text-ink" : "border-white/30 text-white"
           }`}
           aria-label="Toggle menu"
@@ -104,7 +104,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.35 }}
-            className="overflow-hidden bg-white/95 backdrop-blur-xl xl:hidden"
+            className="overflow-hidden bg-white/95 backdrop-blur-xl lg:hidden"
           >
             <ul className="container-px flex flex-col gap-1 py-5">
               {nav.map((item) => (

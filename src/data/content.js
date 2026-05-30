@@ -26,13 +26,15 @@ export const brand = {
   ],
 };
 
+// `short` is used in the desktop top bar so all items fit on one line;
+// `label` (full) is used in the mobile menu and footer.
 export const nav = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
-  { label: "Work With Me", to: "/work-with-me" },
-  { label: "Unbox Your Aura", to: "/unbox-your-aura" },
-  { label: "Books & Products", to: "/books" },
-  { label: "Confidence Nuggets", to: "/blog" },
+  { label: "Work With Me", short: "Work With Me", to: "/work-with-me" },
+  { label: "Unbox Your Aura", short: "Unbox Aura", to: "/unbox-your-aura" },
+  { label: "Books & Products", short: "Books", to: "/books" },
+  { label: "Confidence Nuggets", short: "Nuggets", to: "/blog" },
   { label: "Podcast", to: "/podcast" },
   { label: "Advocacy", to: "/advocacy" },
   { label: "Contact", to: "/contact" },
