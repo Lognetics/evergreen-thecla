@@ -40,16 +40,19 @@ export default function Reveal({
 }
 
 // Stagger container + item for lists of cards.
-export function Stagger({ children, className = "", amount = 0.15 }) {
+// `immediate` shows the children on mount (for primary content that must be
+// visible right away, e.g. a blog grid) instead of waiting to scroll into view.
+export function Stagger({ children, className = "", amount = 0.15, immediate = false }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount });
+  const show = immediate || inView;
   return (
     <motion.div
       ref={ref}
       className={className}
       initial="hidden"
-      animate={inView ? "show" : "hidden"}
-      variants={{ show: { transition: { staggerChildren: 0.12 } } }}
+      animate={show ? "show" : "hidden"}
+      variants={{ show: { transition: { staggerChildren: 0.08 } } }}
     >
       {children}
     </motion.div>

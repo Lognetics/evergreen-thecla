@@ -156,14 +156,14 @@ export default function About() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent" />
               <div className="absolute inset-0 flex items-center justify-center">
-                <PlayBadge video={videos.behindScenes} />
+                <PlayBadge video={videos.auraEp3} />
               </div>
               <div className="absolute inset-x-0 bottom-0 p-5 text-left">
                 <span className="rounded-full bg-gold px-3 py-1 font-accent text-[10px] font-bold uppercase tracking-wider text-ink">
                   Watch
                 </span>
                 <p className="mt-2 font-display text-lg text-white">
-                  Behind the scenes with Thecla
+                  On finding your voice
                 </p>
               </div>
             </div>

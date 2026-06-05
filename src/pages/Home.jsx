@@ -150,14 +150,13 @@ export default function Home() {
         <div className="pointer-events-none absolute -right-20 top-10 h-80 w-80 rounded-full bg-brand/25 blur-3xl" />
         <div className="container-px relative grid items-center gap-12 lg:grid-cols-2">
           <Reveal dir="left">
-            <span className="eyebrow-gold">Spoken Word</span>
+            <span className="eyebrow-gold">Unbox Your Aura</span>
             <h2 className="mt-4 text-3xl leading-tight text-white sm:text-4xl">
-              Watch “Call Me Woman”
+              Watch & Get Inspired
             </h2>
             <p className="mt-5 max-w-md leading-relaxed text-white/70">
-              A powerful spoken word performance for International Women’s Day — a
-              glimpse of how Thecla turns words into experiences that move audiences and
-              spark courage.
+              Bite-sized wisdom from the Unbox Your Aura series — on confidence, courage
+              and discovering the gift you were created to share with the world.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a
@@ -168,13 +167,13 @@ export default function Home() {
               >
                 Visit YouTube Channel
               </a>
-              <Link to="/work-with-me" className="btn-outline">
-                Book a Performance
+              <Link to="/podcast" className="btn-outline">
+                More Episodes
               </Link>
             </div>
           </Reveal>
           <Reveal dir="right">
-            <VideoCard video={videos.callMeWoman} />
+            <VideoCard video={videos.auraEp2} />
           </Reveal>
         </div>
       </section>

@@ -34,13 +34,13 @@ export default function Advocacy() {
             <p className="mt-5 leading-relaxed text-ink/60">
               From the girl child to the boardroom, Thecla's advocacy is rooted in a
               simple belief: when people — especially women and young people — find their
-              voice, they reshape the world around them. Her spoken word piece{" "}
-              <strong className="text-ink">“Call Me Woman”</strong> captures that
+              voice, they reshape the world around them. Her message on breaking free of
+              the <strong className="text-ink">comfort zone</strong> captures that
               conviction.
             </p>
           </Reveal>
           <Reveal dir="right">
-            <VideoCard video={videos.callMeWoman} />
+            <VideoCard video={videos.auraEp4} />
           </Reveal>
         </div>
       </section>
