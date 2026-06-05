@@ -7,18 +7,18 @@ import CTABand from "../components/ui/CTABand";
 import { getIcon } from "../components/ui/icons";
 import { VideoCard } from "../components/ui/VideoPlayer";
 import { advocacyAreas, leadership, impactStats } from "../data/content";
-import { features, slice } from "../data/images";
+import { features, advocacyGallery } from "../data/images";
 import { videos } from "../data/videos";
 
 export default function Advocacy() {
   return (
     <>
       <PageHero
-        eyebrow="Advocacy & Development"
-        title="Advocacy & Development Work"
-        subtitle="Beyond the stage, Thecla champions youth, education, the girl child and community development — working for a more confident, empowered and self-determined Africa."
+        eyebrow="Advocacy & Leadership"
+        title="Advocacy & Leadership Career"
+        subtitle="Beyond the stage, Thecla champions youth, education, the girl child and community development — and leads continental youth and education initiatives for a more confident, empowered Africa."
         image={features.advocacy}
-        imageAlt="Advocacy work"
+        imageAlt="Thecla speaking at an advocacy event"
       />
 
       {/* Intro statement + video */}
@@ -124,7 +124,7 @@ export default function Advocacy() {
             intro="Documentary moments from events, panels, conferences and community engagement."
           />
           <div className="mt-14">
-            <Gallery images={slice(15, 6)} columns={3} />
+            <Gallery images={advocacyGallery} columns={3} />
           </div>
         </div>
       </section>

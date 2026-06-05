@@ -107,6 +107,8 @@ export default function Contact() {
                       <a
                         key={s.name}
                         href={s.url}
+                        target="_blank"
+                        rel="noreferrer"
                         className="rounded-full border border-ink/10 px-4 py-2 font-accent text-xs font-semibold text-ink/60 transition hover:border-brand hover:bg-brand hover:text-white"
                       >
                         {s.name}

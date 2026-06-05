@@ -17,12 +17,32 @@ export const brand = {
   email: "evergreenthecla24@gmail.com",
   phones: ["+234 916 905 1383", "+234 906 003 7295"],
   socials: [
-    { name: "Instagram", url: "#", handle: "@evergreenthecla" },
-    { name: "LinkedIn", url: "#", handle: "Thecla A. Orakwe" },
-    { name: "Facebook", url: "#", handle: "Evergreen Thecla" },
-    { name: "TikTok", url: "#", handle: "@evergreenthecla" },
-    { name: "YouTube", url: "#", handle: "Evergreen Thecla" },
-    { name: "X", url: "#", handle: "@evergreenthecla" },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/evergreen.thecla?utm_source=qr",
+      handle: "@evergreen.thecla",
+    },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/thecla-orakwe-6b2aba204",
+      handle: "Thecla Orakwe",
+    },
+    {
+      name: "Facebook",
+      url: "https://www.facebook.com/share/18rrRqwHR7/?mibextid=wwXIfr",
+      handle: "Evergreen Thecla",
+    },
+    {
+      name: "TikTok",
+      url: "https://www.tiktok.com/@evergreen.thecla",
+      handle: "@evergreen.thecla",
+    },
+    {
+      name: "YouTube",
+      url: "https://youtube.com/@evergreenthecla",
+      handle: "Evergreen Thecla",
+    },
+    { name: "X", url: "https://x.com/evergreenthecla", handle: "@evergreenthecla" },
   ],
 };
 
@@ -34,9 +54,9 @@ export const nav = [
   { label: "Work With Me", short: "Work With Me", to: "/work-with-me" },
   { label: "Unbox Your Aura", short: "Unbox Aura", to: "/unbox-your-aura" },
   { label: "Books & Products", short: "Books", to: "/books" },
-  { label: "Confidence Nuggets", short: "Nuggets", to: "/blog" },
+  { label: "Blogs / Confidence Nuggets", to: "/blog" },
   { label: "Podcast", to: "/podcast" },
-  { label: "Advocacy", to: "/advocacy" },
+  { label: "Advocacy & Leadership Career", to: "/advocacy" },
   { label: "Contact", to: "/contact" },
 ];
 
@@ -462,53 +482,55 @@ export const podcastTopics = [
   "Career Development",
 ];
 
-// Episodes with a `video` key are playable now (real YouTube content);
-// the rest are teased as coming soon.
+// Episodes with a `video` key are playable now (real YouTube content).
 export const podcastEpisodes = [
   {
     number: "01",
+    title: "This Is For Anyone Who Is Afraid To Start",
+    note: "Now Playing",
+    duration: "Short",
+    video: "auraEp1",
+    desc: "The intro episode — a word of courage for anyone standing at the edge of a new beginning.",
+  },
+  {
+    number: "02",
+    title: "Everyone Has a Gift 🎁",
+    note: "Now Playing",
+    duration: "Short",
+    video: "auraEp2",
+    desc: "You were created with something the world needs. Here's how to recognise and own your gift.",
+  },
+  {
+    number: "03",
+    title: "Why People Shy Away From Public Speaking",
+    note: "Now Playing",
+    duration: "Short",
+    video: "auraEp3",
+    desc: "The real reasons fear of speaking holds us back — and the first steps to moving past it.",
+  },
+  {
+    number: "04",
+    title: "Comfort Zone Is a Beautiful Prison",
+    note: "Now Playing",
+    duration: "Short",
+    video: "auraEp4",
+    desc: "Why staying comfortable quietly costs you growth — and how to break free of the prison.",
+  },
+  {
+    number: "05",
     title: "CALL ME WOMAN — A Spoken Word Premiere",
     note: "Now Playing",
     duration: "4 min",
     video: "callMeWoman",
-    desc: "The full spoken word performance that started it all — a celebration of womanhood, voice and courage.",
+    desc: "The full spoken word performance — a celebration of womanhood, voice and courage.",
   },
   {
-    number: "02",
+    number: "06",
     title: "Behind the Scenes of CALL ME WOMAN",
     note: "Now Playing",
     duration: "2 min",
     video: "behindScenes",
     desc: "Go behind the production of the spoken word piece — the heart, the process and the message.",
-  },
-  {
-    number: "03",
-    title: "Guiding Your Vision to Reality",
-    note: "Now Playing",
-    duration: "Feature",
-    video: "callMeWoman",
-    desc: "A conversation on turning purpose into action and dreams into measurable impact.",
-  },
-  {
-    number: "04",
-    title: "Becoming Unapologetically You",
-    note: "Coming Soon",
-    duration: "—",
-    desc: "On shedding the fear of being seen and stepping fully into who you were created to be.",
-  },
-  {
-    number: "05",
-    title: "Finding Your Voice in a Loud World",
-    note: "Coming Soon",
-    duration: "—",
-    desc: "How to speak up, stand out and be heard — even when self-doubt is loud.",
-  },
-  {
-    number: "06",
-    title: "The Confidence Conversation",
-    note: "Coming Soon",
-    duration: "—",
-    desc: "Confidence is a skill, not a personality. Here's how to build it on purpose.",
   },
 ];
 
@@ -547,16 +569,16 @@ export const advocacyAreas = [
 
 export const leadership = [
   {
-    role: "Co-Founder",
+    role: "Co-Founder / Executive Director",
     org: "AESDI",
-    full: "African Education & Sustainable Development Initiative",
-    text: "Co-founding an initiative focused on education and sustainable development across the continent.",
+    full: "African Education & Social Development Initiative",
+    text: "Co-founding and leading an initiative focused on education and social development across the continent.",
   },
   {
-    role: "Vice President",
+    role: "National Vice President",
     org: "AUYC",
-    full: "African Union Youth Council",
-    text: "Representing and advancing youth voices in continental leadership and development.",
+    full: "African Union Youth Club (AUYC), Nigeria Chapter",
+    text: "Representing and advancing youth voices in continental leadership and development as National Vice President of the Nigeria Chapter.",
   },
 ];
 

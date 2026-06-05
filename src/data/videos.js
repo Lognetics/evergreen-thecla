@@ -25,6 +25,34 @@ export const videos = {
     poster: "/images/yt-owMSadN_HvA.jpg",
     tag: "Feature",
   },
+  auraEp1: {
+    id: "e7bNjYD26rg",
+    title: "This Is For Anyone Who Is Afraid To Start",
+    subtitle: "Unbox Your Aura · Episode 1",
+    poster: "/images/yt-e7bNjYD26rg.jpg",
+    tag: "Unbox · Ep. 1",
+  },
+  auraEp2: {
+    id: "E1aB9BwWN94",
+    title: "Everyone Has a Gift",
+    subtitle: "Unbox Your Aura · Episode 2",
+    poster: "/images/yt-E1aB9BwWN94.jpg",
+    tag: "Unbox · Ep. 2",
+  },
+  auraEp3: {
+    id: "ZgVsMT4fjME",
+    title: "Why People Shy Away From Public Speaking",
+    subtitle: "Unbox Your Aura · Episode 3",
+    poster: "/images/yt-ZgVsMT4fjME.jpg",
+    tag: "Unbox · Ep. 3",
+  },
+  auraEp4: {
+    id: "4j8qAdz1WLU",
+    title: "Comfort Zone Is a Beautiful Prison",
+    subtitle: "Unbox Your Aura · Episode 4",
+    poster: "/images/yt-4j8qAdz1WLU.jpg",
+    tag: "Unbox · Ep. 4",
+  },
 };
 
 export const videoList = Object.values(videos);

@@ -27,7 +27,7 @@ export default function Navbar() {
           : "py-5"
       }`}
     >
-      <nav className="container-px flex items-center justify-between gap-4">
+      <nav className="mx-auto flex w-full max-w-[90rem] items-center justify-between gap-3 px-5 sm:px-7">
         <Link to="/" className="group flex shrink-0 items-center gap-2">
           <img
             src={scrolled ? logoDark : logoLight}
@@ -38,13 +38,13 @@ export default function Navbar() {
           />
         </Link>
 
-        <ul className="hidden items-center lg:flex">
+        <ul className="hidden items-center xl:flex">
           {nav.map((item) => (
             <li key={item.to}>
               <NavLink
                 to={item.to}
                 className={({ isActive }) =>
-                  `relative whitespace-nowrap rounded-full px-2.5 py-2 font-accent text-[13px] font-medium transition-colors xl:px-3 ${
+                  `relative whitespace-nowrap rounded-full px-2 py-2 font-accent text-[12.5px] font-medium transition-colors ${
                     isActive
                       ? scrolled
                         ? "text-brand"
@@ -61,7 +61,7 @@ export default function Navbar() {
                     {isActive && (
                       <motion.span
                         layoutId="nav-underline"
-                        className={`absolute inset-x-2.5 -bottom-0.5 h-0.5 rounded-full ${
+                        className={`absolute inset-x-2 -bottom-0.5 h-0.5 rounded-full ${
                           scrolled ? "bg-emerald-gradient" : "bg-gold"
                         }`}
                       />
@@ -73,13 +73,13 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden shrink-0 items-center lg:flex">
+        <div className="hidden shrink-0 items-center xl:flex">
           <Link
             to="/contact"
             className={
               scrolled
-                ? "btn-primary whitespace-nowrap px-4 py-2.5 text-[13px]"
-                : "btn-gold whitespace-nowrap px-4 py-2.5 text-[13px]"
+                ? "btn-primary whitespace-nowrap px-4 py-2.5 text-[12.5px]"
+                : "btn-gold whitespace-nowrap px-4 py-2.5 text-[12.5px]"
             }
           >
             Book Me to Speak
@@ -88,7 +88,7 @@ export default function Navbar() {
 
         <button
           onClick={() => setOpen((v) => !v)}
-          className={`flex h-11 w-11 items-center justify-center rounded-full border transition-colors lg:hidden ${
+          className={`flex h-11 w-11 items-center justify-center rounded-full border transition-colors xl:hidden ${
             scrolled ? "border-ink/10 text-ink" : "border-white/30 text-white"
           }`}
           aria-label="Toggle menu"
@@ -104,7 +104,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.35 }}
-            className="overflow-hidden bg-white/95 backdrop-blur-xl lg:hidden"
+            className="overflow-hidden bg-white/95 backdrop-blur-xl xl:hidden"
           >
             <ul className="container-px flex flex-col gap-1 py-5">
               {nav.map((item) => (

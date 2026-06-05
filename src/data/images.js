@@ -68,6 +68,18 @@ export const gallery = [
   "WhatsApp-Image-2026-04-14-at-7.04.00-AM.jpeg",
 ].map(img);
 
+// Curated advocacy & leadership photos (AU Youth Council inductions, AU Agenda
+// 2063 panels, youth/education engagement, women's conferences) — no poetry/
+// performance or casual social shots.
+export const advocacyGallery = [
+  "d6806bd6-78d6-4e50-892e-bbfd32b70370.jpg", // AUYC Executives Induction (podium)
+  "ab6bdbb5-70e2-492a-868c-cc1f085c29f9.jpg", // AUYC Nigeria Chapter induction
+  "26b78fae-1ace-4199-b522-2c177d27e8d7.jpg", // AU Agenda 2063 panel (on stage)
+  "c94d929d-0603-4850-93d7-740bc28c8ad7.jpg", // AU Agenda 2063 assembly (speaking)
+  "0f320330-c2bb-4506-9530-1ff5d3978f65.jpg", // youth / education engagement
+  "95f75604-8ca2-4904-9a01-6e391b538e9e.jpg", // Connect Her women's conference
+].map(img);
+
 // Deterministic slice helper so pages don't all show the same photos
 export const slice = (start, count) => {
   const out = [];

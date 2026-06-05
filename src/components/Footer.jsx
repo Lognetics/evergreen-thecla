@@ -115,6 +115,8 @@ export default function Footer() {
               <a
                 key={s.name}
                 href={s.url}
+                target="_blank"
+                rel="noreferrer"
                 className="flex h-9 items-center rounded-full border border-white/15 px-3 font-accent text-xs text-white/70 transition hover:border-gold hover:text-gold"
               >
                 {s.name}

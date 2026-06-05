@@ -4,9 +4,9 @@ import PageHero from "../components/ui/PageHero";
 import Reveal, { Stagger, StaggerItem } from "../components/ui/Reveal";
 import SectionHeading from "../components/ui/SectionHeading";
 import { getIcon } from "../components/ui/icons";
-import { PlayBadge } from "../components/ui/VideoPlayer";
+import { VideoCard } from "../components/ui/VideoPlayer";
 import { auraFeatures, auraHelps } from "../data/content";
-import { features, slice } from "../data/images";
+import { portraits } from "../data/images";
 import { videos } from "../data/videos";
 
 const benefits = [
@@ -58,8 +58,8 @@ export default function UnboxYourAura() {
         eyebrow="Unbox Your Aura"
         title="A community for becoming your fullest self"
         subtitle="Unbox Your Aura is a platform and community focused on helping people build confidence, find their voice and become the best version of themselves."
-        image={features.community}
-        imageAlt="Unbox Your Aura community"
+        image={portraits.about}
+        imageAlt="Evergreen Thecla"
       />
 
       {/* What is it */}
@@ -90,17 +90,10 @@ export default function UnboxYourAura() {
           </Reveal>
           <Reveal dir="right" className="relative">
             <div className="absolute -inset-4 rounded-[2rem] bg-emerald-gradient opacity-10 blur-2xl" />
-            <div className="group relative overflow-hidden rounded-[2rem] shadow-card">
-              <img
-                src={slice(7, 1)[0]}
-                alt="Unbox Your Aura session"
-                className="aspect-[4/3] w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-ink/50 to-transparent" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <PlayBadge video={videos.vision} />
-              </div>
-            </div>
+            <VideoCard video={videos.auraEp1} ratio="aspect-[4/3]" className="rounded-[2rem]" />
+            <p className="mt-3 text-center font-accent text-xs uppercase tracking-wider text-ink/45">
+              Watch the intro episode
+            </p>
           </Reveal>
         </div>
       </section>
