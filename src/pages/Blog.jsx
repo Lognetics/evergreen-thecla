@@ -70,11 +70,11 @@ export default function Blog() {
   return (
     <>
       <PageHero
-        eyebrow="Confidence Nuggets"
-        title="Confidence Nuggets"
+        eyebrow="The Journal"
+        title="Blog / Confidence Nuggets"
         subtitle="Bite-sized wisdom on confidence, public speaking, growth, leadership, faith and becoming — to inspire and equip you on your journey."
         image={features.host}
-        imageAlt="Confidence Nuggets blog"
+        imageAlt="Blog / Confidence Nuggets"
       />
 
       {/* Search + categories */}
@@ -211,6 +211,76 @@ export default function Blog() {
               ))}
             </Stagger>
           )}
+        </div>
+      </section>
+
+      {/* Quick link-style list (searchable via the controls above) */}
+      <section className="bg-white py-16">
+        <div className="container-px">
+          <div className="mx-auto max-w-3xl">
+            <div className="mb-8 flex items-end justify-between gap-4 border-b border-ink/5 pb-5">
+              <div>
+                <span className="eyebrow">Browse</span>
+                <h2 className="mt-1 font-display text-2xl text-ink sm:text-3xl">
+                  All Articles
+                </h2>
+              </div>
+              <span className="shrink-0 font-accent text-xs uppercase tracking-wider text-ink/45">
+                {filtered.length} post{filtered.length === 1 ? "" : "s"}
+              </span>
+            </div>
+
+            {filtered.length === 0 ? (
+              <p className="py-8 text-center text-ink/50">
+                No articles match your search.
+              </p>
+            ) : (
+              <Stagger immediate className="flex flex-col gap-3">
+                {filtered.map((p) => (
+                  <StaggerItem key={p.title}>
+                    <article
+                      onClick={() => setOpenPost(p)}
+                      className="group flex cursor-pointer items-center gap-4 rounded-2xl border border-ink/5 bg-cream p-3 transition-colors hover:border-brand/20 hover:bg-sage/40 sm:gap-5 sm:p-4"
+                    >
+                      <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-xl sm:h-24 sm:w-28">
+                        <img
+                          src={p.img}
+                          alt={p.title}
+                          loading="lazy"
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
+                        {p.pinned && (
+                          <span className="absolute left-1.5 top-1.5 rounded-full bg-gold px-2 py-0.5 font-accent text-[8px] font-bold uppercase tracking-wider text-ink">
+                            Pinned
+                          </span>
+                        )}
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <span
+                          className={`inline-block rounded-full px-2.5 py-0.5 font-accent text-[10px] font-semibold text-white ${catColors[p.category]}`}
+                        >
+                          {p.category}
+                        </span>
+                        <h3 className="mt-1.5 line-clamp-2 font-display text-base font-semibold leading-snug text-brand-deep underline-offset-2 group-hover:text-brand group-hover:underline sm:text-lg">
+                          {p.title}
+                        </h3>
+                        <p className="mt-1 line-clamp-1 text-sm text-ink/55">
+                          {p.excerpt}
+                        </p>
+                        <span className="mt-1.5 flex items-center gap-1.5 text-xs text-ink/40">
+                          <Clock size={12} /> {p.read}
+                        </span>
+                      </div>
+                      <ArrowRight
+                        size={18}
+                        className="hidden shrink-0 text-brand transition-transform group-hover:translate-x-1 sm:block"
+                      />
+                    </article>
+                  </StaggerItem>
+                ))}
+              </Stagger>
+            )}
+          </div>
         </div>
       </section>
 
