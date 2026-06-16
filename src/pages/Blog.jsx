@@ -58,9 +58,6 @@ export default function Blog() {
 
   const filtered = useMemo(() => {
     return posts.filter((p) => {
-      // Hide the pinned/featured post from the grid in the default view
-      // (it already appears as the big featured card above).
-      if (showingDefault && p.featured) return false;
       const matchCat = active === "All" || p.category === active;
       const matchQ =
         !query ||
@@ -68,7 +65,7 @@ export default function Blog() {
         p.excerpt.toLowerCase().includes(query.toLowerCase());
       return matchCat && matchQ;
     });
-  }, [query, active, showingDefault]);
+  }, [query, active]);
 
   return (
     <>
