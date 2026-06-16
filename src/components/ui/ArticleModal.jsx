@@ -13,6 +13,90 @@ const catColors = {
   "Youth Development": "bg-brand-deep",
 };
 
+// Renders a structured article body made of typed blocks.
+function ArticleBlocks({ blocks }) {
+  let firstPara = true;
+  return (
+    <div className="space-y-4">
+      {blocks.map((b, i) => {
+        if (b.t === "h2")
+          return (
+            <h3 key={i} className="!mt-8 font-display text-2xl text-ink">
+              {b.x}
+            </h3>
+          );
+        if (b.t === "h3")
+          return (
+            <h4 key={i} className="!mt-8 font-display text-xl text-brand-deep">
+              {b.x}
+            </h4>
+          );
+        if (b.t === "quote")
+          return (
+            <blockquote
+              key={i}
+              className="my-2 rounded-2xl border-l-4 border-gold bg-sage/50 px-5 py-4 font-display text-lg italic leading-relaxed text-brand-deep"
+            >
+              {b.x}
+            </blockquote>
+          );
+        if (b.t === "ul")
+          return (
+            <ul key={i} className="space-y-2.5">
+              {b.items.map((it, j) => (
+                <li key={j} className="flex gap-3 text-ink/70">
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                  <span className="leading-relaxed">{it}</span>
+                </li>
+              ))}
+            </ul>
+          );
+        if (b.t === "details")
+          return (
+            <dl
+              key={i}
+              className="grid gap-3 rounded-2xl border border-ink/5 bg-cream p-5 sm:p-6"
+            >
+              {b.items.map((it, j) => (
+                <div key={j} className="grid gap-1 sm:grid-cols-[110px_1fr] sm:gap-4">
+                  <dt className="font-accent text-xs font-semibold uppercase tracking-wider text-brand">
+                    {it.label}
+                  </dt>
+                  <dd className="text-sm leading-relaxed text-ink/75">{it.value}</dd>
+                </div>
+              ))}
+            </dl>
+          );
+        if (b.t === "img")
+          return (
+            <img
+              key={i}
+              src={b.src}
+              alt={b.alt || ""}
+              loading="lazy"
+              className="my-2 w-full rounded-2xl border border-ink/5 shadow-soft"
+            />
+          );
+        // paragraph
+        const drop = firstPara;
+        firstPara = false;
+        return (
+          <p
+            key={i}
+            className={`leading-relaxed text-ink/70 ${
+              drop
+                ? "text-lg first-letter:float-left first-letter:mr-2 first-letter:font-display first-letter:text-5xl first-letter:font-bold first-letter:text-brand"
+                : ""
+            }`}
+          >
+            {b.x}
+          </p>
+        );
+      })}
+    </div>
+  );
+}
+
 // Full-article reading modal opened from the blog grid.
 export default function ArticleModal({ post, image, onClose }) {
   useEffect(() => {
@@ -60,8 +144,8 @@ export default function ArticleModal({ post, image, onClose }) {
             >
               {post.category}
             </span>
-            <h2 className="mt-3 font-display text-2xl leading-tight text-white sm:text-3xl">
-              {post.title}
+            <h2 className="mt-3 font-display text-xl leading-tight text-white sm:text-2xl">
+              {post.headline || post.title}
             </h2>
           </div>
         </div>
@@ -80,17 +164,25 @@ export default function ArticleModal({ post, image, onClose }) {
             </span>
           </div>
 
-          <div className="mt-6 space-y-4">
-            {(post.body || [post.excerpt]).map((para, i) => (
-              <p
-                key={i}
-                className={`leading-relaxed text-ink/70 ${
-                  i === 0 ? "text-lg first-letter:float-left first-letter:mr-2 first-letter:font-display first-letter:text-5xl first-letter:font-bold first-letter:text-brand" : ""
-                }`}
-              >
-                {para}
-              </p>
-            ))}
+          <div className="mt-6">
+            {post.blocks ? (
+              <ArticleBlocks blocks={post.blocks} />
+            ) : (
+              <div className="space-y-4">
+                {(post.body || [post.excerpt]).map((para, i) => (
+                  <p
+                    key={i}
+                    className={`leading-relaxed text-ink/70 ${
+                      i === 0
+                        ? "text-lg first-letter:float-left first-letter:mr-2 first-letter:font-display first-letter:text-5xl first-letter:font-bold first-letter:text-brand"
+                        : ""
+                    }`}
+                  >
+                    {para}
+                  </p>
+                ))}
+              </div>
+            )}
           </div>
 
           <div className="mt-8 flex items-center justify-between border-t border-ink/5 pt-6">

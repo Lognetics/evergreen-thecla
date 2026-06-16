@@ -16,6 +16,7 @@ import ServiceCard from "../components/ui/ServiceCard";
 import Testimonials from "../components/ui/Testimonials";
 import CTABand from "../components/ui/CTABand";
 import HeroSlider from "../components/HeroSlider";
+import BlogCarousel from "../components/BlogCarousel";
 import { VideoCard } from "../components/ui/VideoPlayer";
 import { brand, services, stats, auraFeatures, auraHelps } from "../data/content";
 import { portraits, features } from "../data/images";
@@ -263,6 +264,27 @@ export default function Home() {
           <div className="mt-14">
             <Testimonials />
           </div>
+        </div>
+      </section>
+
+      {/* ============ CONFIDENCE NUGGETS CAROUSEL ============ */}
+      <section className="relative overflow-hidden bg-cream py-24">
+        <div className="container-px">
+          <div className="flex flex-col items-end justify-between gap-6 sm:flex-row">
+            <SectionHeading
+              align="left"
+              eyebrow="Confidence Nuggets"
+              title="From the Blog"
+              intro="Bite-sized wisdom on confidence, leadership, growth and becoming — fresh from the journal."
+              className="!items-start"
+            />
+            <Link to="/blog" className="btn-outline-dark shrink-0">
+              Read all articles <ArrowRight size={16} />
+            </Link>
+          </div>
+        </div>
+        <div className="mt-14">
+          <BlogCarousel />
         </div>
       </section>
 

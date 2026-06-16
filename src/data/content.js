@@ -300,12 +300,126 @@ export const blogCategories = [
 
 export const blogPosts = [
   {
+    title: "Africa’s Next Generation of Diplomats Convenes in Accra",
+    headline:
+      "Africa’s Next Generation of Diplomats Convenes in Accra, and Amb. Thecla Amarachukwu Orakwe’s Voice Is Set to Leave a Lasting Mark on the Continent’s Diplomatic Future",
+    category: "Leadership",
+    excerpt:
+      "Amb. Thecla Amarachukwu Orakwe joins a distinguished panel at the International Diplomatic Leadership Conference in Accra — where young African voices are shaping the continent’s diplomatic future.",
+    read: "5 min read",
+    featured: true,
+    pinned: true,
+    cover: "/images/blog-diplomacy-thecla.jpg",
+    blocks: [
+      {
+        t: "p",
+        x: "Africa's diplomatic landscape is undergoing a remarkable transformation. Across the continent, a new generation of leaders is emerging — young professionals, advocates, and changemakers who are redefining diplomacy and shaping conversations that will influence Africa's future for decades to come.",
+      },
+      {
+        t: "p",
+        x: "On Thursday, June 18, 2026, Accra, Ghana, will serve as a hub for these emerging voices as the International Diplomatic Leadership Conference for Emerging Leaders in African and Global Affairs convenes at the School of Public Health Auditorium, University of Ghana, Legon.",
+      },
+      {
+        t: "p",
+        x: "Organized by the Africa Young Diplomats Forum CIC, the conference will bring together diplomats, policymakers, development practitioners, business leaders, and aspiring diplomats to engage in meaningful discussions on Africa's role within the evolving global landscape.",
+      },
+      { t: "h2", x: "Exploring the Power of Soft Diplomacy" },
+      { t: "p", x: "This year's conference will be held under the theme:" },
+      {
+        t: "quote",
+        x: "Soft Diplomacy as a Strategic Tool for Regional Economic Integration, Cooperative Partnerships, and Sustainable Development within the Framework of Agenda 2063.",
+      },
+      {
+        t: "p",
+        x: "The theme underscores the growing importance of diplomacy beyond traditional statecraft. In today's interconnected world, diplomacy increasingly relies on collaboration, cultural engagement, strategic partnerships, youth participation, and people-centered solutions that foster sustainable development and regional integration.",
+      },
+      {
+        t: "p",
+        x: "As Africa continues its journey toward realizing the aspirations of Agenda 2063, soft diplomacy has become a vital instrument for strengthening relationships, promoting economic cooperation, and addressing shared continental challenges.",
+      },
+      { t: "h2", x: "Amb. Thecla Amarachukwu Orakwe Joins Distinguished Panel" },
+      {
+        t: "p",
+        x: "Among the distinguished voices selected to contribute to this important dialogue is Amb. Thecla Amarachukwu Orakwe, who has been invited by the Africa Young Diplomats Forum CIC to serve as a panelist at the conference.",
+      },
+      {
+        t: "p",
+        x: "As the National Vice President of the African Union Youth Council (Clubs), Nigeria Chapter, Amb. Orakwe represents a generation of young African leaders dedicated to advancing diplomacy, youth engagement, leadership development, and sustainable progress across the continent.",
+      },
+      {
+        t: "p",
+        x: "Her participation reflects the growing influence of young Africans in diplomatic spaces and highlights the importance of ensuring that youth perspectives remain central to conversations about Africa's future.",
+      },
+      {
+        t: "img",
+        src: "/images/blog-diplomacy-lineup.jpg",
+        alt: "International Diplomatic Leadership Conference — speakers and panelists",
+      },
+      { t: "h2", x: "A Gathering of Global and Continental Leaders" },
+      {
+        t: "p",
+        x: "The conference will feature an impressive lineup of speakers and thought leaders from across Africa and beyond.",
+      },
+      {
+        t: "p",
+        x: "The event will be chaired by H.E. Amb. Prof. Tunji Asaolu, Secretary General of the United World Congress of Diplomats, who will also deliver the keynote address.",
+      },
+      { t: "p", x: "Other notable speakers include:" },
+      {
+        t: "ul",
+        items: [
+          "Ms. Mariama Jalloh — National Director, Young Women in Governance Network, Sierra Leone",
+          "Mr. Caleb Darkwa — Managing Director, MOHBILITY Ghana Limited",
+          "Mrs. Olufunke Aderogba — Global Head of Program, AYDF Global",
+          "Amb. Councillor Stacey Murphy — Trinidad and Tobago",
+          "Alongside other respected diplomats, development professionals, and emerging leaders from across the globe.",
+        ],
+      },
+      {
+        t: "p",
+        x: "Together, these speakers will explore how diplomacy can serve as a catalyst for stronger partnerships, regional integration, economic growth, and sustainable development.",
+      },
+      { t: "h2", x: "More Than a Conference" },
+      {
+        t: "p",
+        x: "Beyond the presentations and panel discussions, the International Diplomatic Leadership Conference represents a broader movement — one that empowers young leaders to actively shape diplomatic narratives, foster international cooperation, and contribute meaningfully to Africa's development agenda.",
+      },
+      {
+        t: "p",
+        x: "It is a platform where ideas are exchanged, networks are built, and future collaborations are born. Most importantly, it demonstrates that the future of diplomacy is increasingly being influenced by young, innovative, and globally minded Africans.",
+      },
+      { t: "h2", x: "Looking Ahead" },
+      {
+        t: "p",
+        x: "As Accra welcomes emerging diplomatic leaders from across the continent and beyond, Amb. Thecla Amarachukwu Orakwe's participation stands as a testament to the growing presence of young African voices in spaces where critical decisions, transformative ideas, and strategic partnerships are taking shape.",
+      },
+      {
+        t: "p",
+        x: "Her contribution to the conference reflects the potential of Africa's youth to drive meaningful change and reinforces the importance of inclusive leadership in building a prosperous and globally connected Africa.",
+      },
+      { t: "h3", x: "Conference Details" },
+      {
+        t: "details",
+        items: [
+          { label: "Event", value: "International Diplomatic Leadership Conference for Emerging Leaders in African and Global Affairs" },
+          { label: "Date", value: "Thursday, June 18, 2026" },
+          { label: "Time", value: "10:00 AM GMT" },
+          { label: "Venue", value: "School of Public Health Auditorium, University of Ghana, Legon, Accra, Ghana" },
+          { label: "Theme", value: "Soft Diplomacy as a Strategic Tool for Regional Economic Integration, Cooperative Partnerships, and Sustainable Development within the Framework of Agenda 2063." },
+        ],
+      },
+      {
+        t: "p",
+        x: "To follow highlights and live updates from the conference, connect with the Africa Young Diplomats Forum on Instagram, LinkedIn, and Facebook: @africayoungdiplomatsforum",
+      },
+    ],
+  },
+  {
     title: "You Don't Have to Shrink to Fit In",
     category: "Confidence",
     excerpt:
       "Why playing small never serves you — and three mindset shifts to help you take up the space you were created for.",
     read: "5 min read",
-    featured: true,
     body: [
       "Somewhere along the way, many of us learned that being smaller — quieter, less visible, less ourselves — was the safest way to belong. We dimmed our light so others wouldn't feel uncomfortable. But shrinking has never made anyone whole. It only makes the world a little dimmer.",
       "You were not created to fit in. You were created to stand out — to carry a voice, a story and a presence that no one else can. The moment you stop apologising for taking up space is the moment you begin to truly live.",

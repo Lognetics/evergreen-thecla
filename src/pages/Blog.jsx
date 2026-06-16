@@ -1,12 +1,14 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import { Search, ArrowRight, Clock } from "lucide-react";
+import { Search, ArrowRight, Clock, Pin } from "lucide-react";
 import PageHero from "../components/ui/PageHero";
 import Reveal, { Stagger, StaggerItem } from "../components/ui/Reveal";
 import SectionHeading from "../components/ui/SectionHeading";
 import ArticleModal from "../components/ui/ArticleModal";
-import { blogCategories, blogPosts } from "../data/content";
-import { features, gallery } from "../data/images";
+import { blogCategories } from "../data/content";
+import { features } from "../data/images";
+import { posts, featuredPost, getPostBySlug } from "../data/posts";
 
 const catColors = {
   Confidence: "bg-emerald-gradient",
@@ -18,30 +20,47 @@ const catColors = {
   "Youth Development": "bg-brand-deep",
 };
 
-// Give every post a stable cover image based on its position in the data.
-const postsWithImg = blogPosts.map((p, i) => ({
-  ...p,
-  img: gallery[(i + 9) % gallery.length],
-}));
-
 export default function Blog() {
   const [query, setQuery] = useState("");
   const [active, setActive] = useState("All");
   const [subscribed, setSubscribed] = useState(false);
   const [openPost, setOpenPost] = useState(null);
+  const [params, setParams] = useSearchParams();
 
-  const featured = postsWithImg.find((p) => p.featured);
+  const featured = featuredPost;
+
+  // Deep-link support: /blog?post=<slug> opens that article.
+  useEffect(() => {
+    const slug = params.get("post");
+    if (slug) {
+      const p = getPostBySlug(slug);
+      if (p) setOpenPost(p);
+    }
+  }, [params]);
+
+  const closePost = () => {
+    setOpenPost(null);
+    if (params.get("post")) {
+      params.delete("post");
+      setParams(params, { replace: true });
+    }
+  };
 
   const counts = useMemo(() => {
-    const c = { All: postsWithImg.length };
+    const c = { All: posts.length };
     blogCategories.forEach((cat) => {
-      c[cat] = postsWithImg.filter((p) => p.category === cat).length;
+      c[cat] = posts.filter((p) => p.category === cat).length;
     });
     return c;
   }, []);
 
+  const showingDefault = active === "All" && !query;
+
   const filtered = useMemo(() => {
-    return postsWithImg.filter((p) => {
+    return posts.filter((p) => {
+      // Hide the pinned/featured post from the grid in the default view
+      // (it already appears as the big featured card above).
+      if (showingDefault && p.featured) return false;
       const matchCat = active === "All" || p.category === active;
       const matchQ =
         !query ||
@@ -49,7 +68,7 @@ export default function Blog() {
         p.excerpt.toLowerCase().includes(query.toLowerCase());
       return matchCat && matchQ;
     });
-  }, [query, active]);
+  }, [query, active, showingDefault]);
 
   return (
     <>
@@ -101,8 +120,8 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* Featured article */}
-      {featured && active === "All" && !query && (
+      {/* Featured / pinned article */}
+      {featured && showingDefault && (
         <section className="bg-cream py-16">
           <div className="container-px">
             <Reveal>
@@ -113,8 +132,8 @@ export default function Blog() {
                     alt={featured.title}
                     className="h-full w-full object-cover"
                   />
-                  <span className="absolute left-5 top-5 rounded-full bg-gold px-3 py-1 font-accent text-[11px] font-bold uppercase tracking-wider text-ink">
-                    Featured
+                  <span className="absolute left-5 top-5 inline-flex items-center gap-1.5 rounded-full bg-gold px-3 py-1 font-accent text-[11px] font-bold uppercase tracking-wider text-ink">
+                    <Pin size={12} /> {featured.pinned ? "Pinned" : "Featured"}
                   </span>
                 </div>
                 <div className="p-8 lg:p-12">
@@ -242,7 +261,7 @@ export default function Blog() {
           <ArticleModal
             post={openPost}
             image={openPost.img}
-            onClose={() => setOpenPost(null)}
+            onClose={closePost}
           />
         )}
       </AnimatePresence>
