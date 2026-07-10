@@ -59,7 +59,7 @@ export default function BookCover({ title, type = "Book", size = "md", className
 
           <div className="relative">
             <span className="block h-px w-8 bg-white/40" />
-            <h4 className="mt-2 font-display text-base font-bold leading-tight">
+            <h4 className="mt-2 font-display text-base font-bold leading-tight text-white">
               {title}
             </h4>
           </div>

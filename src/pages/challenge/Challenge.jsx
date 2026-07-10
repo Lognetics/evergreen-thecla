@@ -56,7 +56,7 @@ export default function Challenge() {
             <span className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-4 py-1.5 font-accent text-xs font-semibold uppercase tracking-[0.2em] text-gold">
               <Sparkles size={14} /> The Thecla Network · Challenge Academy
             </span>
-            <h1 className="mt-5 font-display text-4xl font-semibold leading-[1.05] sm:text-5xl lg:text-6xl">
+            <h1 className="mt-5 font-display text-4xl font-semibold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               The 30-Day Unbox Your Aura Challenge
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-white/70">

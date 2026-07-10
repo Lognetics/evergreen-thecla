@@ -56,7 +56,7 @@ export default function Dashboard() {
             <div className="flex flex-wrap items-end justify-between gap-6">
               <div>
                 <span className="eyebrow-gold">{currentWeek.name} · Week {currentWeek.n}</span>
-                <h1 className="mt-2 font-display text-3xl sm:text-4xl">Welcome back, {first}.</h1>
+                <h1 className="mt-2 font-display text-3xl text-white sm:text-4xl">Welcome back, {first}.</h1>
                 <p className="mt-2 text-white/70">
                   {c.finished ? (
                     <>You've completed all 30 days. Champion! 🏆</>

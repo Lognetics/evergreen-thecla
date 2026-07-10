@@ -286,7 +286,7 @@ export default function Day() {
           {/* header */}
           <div className="rounded-3xl bg-dark-emerald p-8 text-white shadow-glow">
             <span className="eyebrow-gold">Week {week?.n} · {week?.name}{isWeekEnd ? " · Checkpoint" : ""}</span>
-            <h1 className="mt-2 font-display text-3xl leading-tight sm:text-4xl">
+            <h1 className="mt-2 font-display text-3xl leading-tight text-white sm:text-4xl">
               Day {day}: {data.title}
             </h1>
           </div>
