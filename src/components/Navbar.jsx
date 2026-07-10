@@ -44,7 +44,7 @@ export default function Navbar() {
               <NavLink
                 to={item.to}
                 className={({ isActive }) =>
-                  `relative whitespace-nowrap rounded-full px-2 py-2 font-accent text-[12.5px] font-medium transition-colors ${
+                  `relative whitespace-nowrap rounded-full px-1.5 py-2 font-accent text-[12px] font-medium transition-colors ${
                     isActive
                       ? scrolled
                         ? "text-brand"
@@ -61,7 +61,7 @@ export default function Navbar() {
                     {isActive && (
                       <motion.span
                         layoutId="nav-underline"
-                        className={`absolute inset-x-2 -bottom-0.5 h-0.5 rounded-full ${
+                        className={`absolute inset-x-1.5 -bottom-0.5 h-0.5 rounded-full ${
                           scrolled ? "bg-emerald-gradient" : "bg-gold"
                         }`}
                       />

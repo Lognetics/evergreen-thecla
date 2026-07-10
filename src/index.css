@@ -86,3 +86,22 @@
   );
   height: 1px;
 }
+
+/* Print only the certificate when downloading/printing */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .cert-print,
+  .cert-print * {
+    visibility: visible;
+  }
+  .cert-print {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}

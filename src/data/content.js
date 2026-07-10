@@ -53,6 +53,7 @@ export const nav = [
   { label: "About", to: "/about" },
   { label: "Work With Me", short: "Work With Me", to: "/work-with-me" },
   { label: "Unbox Your Aura", short: "Unbox Aura", to: "/unbox-your-aura" },
+  { label: "30-Day Challenge", short: "Challenge", to: "/challenge" },
   { label: "Books & Products", short: "Books", to: "/books" },
   { label: "Blogs / Confidence Nuggets", to: "/blog" },
   { label: "Podcast", to: "/podcast" },

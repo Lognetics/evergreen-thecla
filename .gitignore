@@ -23,3 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 .vercel
+
+# Large source doc (kept locally, not deployed)
+PDF/
