@@ -27,11 +27,15 @@ export const features = {
   advocacy: img("1cbe445e-8391-4779-bd9f-a7fd72138597.jpg"),
 };
 
-// Official brand logo (gold mark + wordmark). Two variants:
-//   logoDark  → emerald wordmark, for light backgrounds (navbar)
-//   logoLight → white wordmark, for dark backgrounds (footer / dark hero)
-export const logoDark = img("Evergreenthecla-logo-2.png");
-export const logoLight = img("Evergreenthecla-logo.png");
+// The Thecla Network (TTN) brand logo — processed to transparent PNGs.
+//   ttnMark*  → the TTN monogram only (compact, for the navbar icon)
+//   ttnLogo*  → the full lockup with wordmark + tagline (footer / feature)
+//   *Color    → full emerald+gold, for light backgrounds
+//   *White    → white monochrome, for dark backgrounds
+export const ttnMarkColor = img("ttn-mark-color.png");
+export const ttnMarkWhite = img("ttn-mark-white.png");
+export const ttnLogoColor = img("ttn-logo-color.png");
+export const ttnLogoWhite = img("ttn-logo-white.png");
 
 // Full gallery pool (landscape event photography)
 export const gallery = [

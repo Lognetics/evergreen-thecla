@@ -101,7 +101,7 @@ export default function HeroSlider() {
           transition={{ delay: 0.2 }}
           className="inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 font-accent text-xs font-semibold uppercase tracking-[0.18em] text-gold backdrop-blur"
         >
-          <Sparkles size={14} /> Evergreen Thecla
+          <Sparkles size={14} /> The Thecla Network
         </motion.span>
 
         <motion.h1

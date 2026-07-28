@@ -9,7 +9,7 @@ import {
   GraduationCap,
 } from "lucide-react";
 import GlowBg from "../components/ui/GlowBg";
-import Reveal, { Stagger } from "../components/ui/Reveal";
+import Reveal, { Stagger, StaggerItem } from "../components/ui/Reveal";
 import SectionHeading from "../components/ui/SectionHeading";
 import Stat from "../components/ui/Stat";
 import ServiceCard from "../components/ui/ServiceCard";
@@ -18,7 +18,8 @@ import CTABand from "../components/ui/CTABand";
 import HeroSlider from "../components/HeroSlider";
 import BlogCarousel from "../components/BlogCarousel";
 import { VideoCard } from "../components/ui/VideoPlayer";
-import { brand, services, stats, auraFeatures, auraHelps } from "../data/content";
+import { getIcon } from "../components/ui/icons";
+import { brand, services, stats, auraFeatures, auraHelps, networkArms } from "../data/content";
 import { portraits, features } from "../data/images";
 import { videos } from "../data/videos";
 
@@ -69,29 +70,62 @@ export default function Home() {
             <SectionHeading
               align="left"
               eyebrow="Welcome"
-              title="Welcome to The Thecla A. Orakwe Brand"
+              title="Welcome to The Thecla Network"
             />
             <Reveal dir="up" delay={0.1}>
               <p className="mt-6 text-lg font-medium text-ink/75">
-                This platform is built on communication, confidence, creativity, and
-                impact.
+                The Thecla Network (TTN) is the home of everything I do — one brand
+                built on communication, confidence, creativity, and impact.
               </p>
               <p className="mt-4 leading-relaxed text-ink/60">
                 Through public speaking, hosting, spoken word poetry, coaching,
-                voiceover, digital content, and advocacy, I help individuals and
-                organizations communicate better, build confidence, tell their
-                stories, and create meaningful impact in their communities and the
-                world.
+                voiceover, digital content, advocacy and the Unbox Your Aura community,
+                the Network helps individuals and organizations communicate better,
+                build confidence, tell their stories, and create meaningful impact in
+                their communities and the world.
               </p>
               <p className="mt-4 font-display text-xl italic text-brand-deep">
-                This is more than a website. This is a space for growth, learning,
-                expression, and becoming.
+                One person. One purpose. A whole network of ways to help you grow,
+                express and become.
               </p>
               <Link to="/about" className="btn-outline-dark mt-8">
-                Read My Story <ArrowRight size={16} />
+                Meet Thecla <ArrowRight size={16} />
               </Link>
             </Reveal>
           </div>
+        </div>
+      </section>
+
+      {/* ============ THE NETWORK ============ */}
+      <section className="relative overflow-hidden bg-white py-24">
+        <div className="container-px">
+          <SectionHeading
+            eyebrow="The Network"
+            title="One network. Every expression."
+            intro="The Thecla Network connects every part of Thecla's work — explore the arm that speaks to you."
+          />
+          <Stagger className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {networkArms.map((a) => {
+              const Icon = getIcon(a.icon);
+              return (
+                <StaggerItem key={a.title}>
+                  <Link
+                    to={a.to}
+                    className="group flex h-full flex-col rounded-2xl border border-ink/5 bg-cream p-6 card-elevate hover:border-brand/20"
+                  >
+                    <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-sage text-brand-deep transition group-hover:bg-emerald-gradient group-hover:text-white">
+                      <Icon size={22} />
+                    </span>
+                    <h3 className="text-lg text-ink">{a.title}</h3>
+                    <p className="mt-1.5 flex-1 text-sm text-ink/55">{a.text}</p>
+                    <span className="mt-3 inline-flex items-center gap-1 font-accent text-xs font-semibold text-brand opacity-0 transition group-hover:opacity-100">
+                      Explore <ArrowRight size={13} />
+                    </span>
+                  </Link>
+                </StaggerItem>
+              );
+            })}
+          </Stagger>
         </div>
       </section>
 

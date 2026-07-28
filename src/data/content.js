@@ -1,7 +1,13 @@
 // All structured site content lives here so pages stay clean.
 
 export const brand = {
+  // The umbrella brand — a network of everything Thecla does.
+  network: "The Thecla Network",
+  networkShort: "TTN",
+  networkTagline: "Inspire. Empower. Transform.",
+  // The founder / person behind the network.
   name: "Thecla Amarachukwu Orakwe",
+  person: "Thecla Amarachukwu Orakwe",
   alias: "Evergreen Thecla",
   tagline: "Find Your Voice. Build Confidence. Become, unapologetically.",
   roles: [
@@ -46,6 +52,59 @@ export const brand = {
   ],
 };
 
+// The arms of The Thecla Network — every expression of Thecla's work, connected
+// under one brand. Icons map to keys in components/ui/icons.js.
+export const networkArms = [
+  {
+    icon: "Mic",
+    title: "Speaking & Hosting",
+    text: "Keynotes, event & red-carpet hosting, and moderation that move audiences.",
+    to: "/work-with-me",
+  },
+  {
+    icon: "Compass",
+    title: "Confidence Coaching",
+    text: "One-on-one and group coaching that turns nervous voices into confident ones.",
+    to: "/work-with-me",
+  },
+  {
+    icon: "Users",
+    title: "Unbox Your Aura",
+    text: "A community helping people find their voice and become their fullest selves.",
+    to: "/unbox-your-aura",
+  },
+  {
+    icon: "GraduationCap",
+    title: "The 30-Day Challenge",
+    text: "A guided, interactive challenge academy for building confidence daily.",
+    to: "/challenge",
+  },
+  {
+    icon: "Feather",
+    title: "Spoken Word & Voiceover",
+    text: "Original spoken word performances and professional voiceover work.",
+    to: "/work-with-me",
+  },
+  {
+    icon: "Globe2",
+    title: "Advocacy & Leadership",
+    text: "Championing youth, education and the girl child across Africa.",
+    to: "/advocacy",
+  },
+  {
+    icon: "Headphones",
+    title: "Podcast",
+    text: "Honest conversations on confidence, purpose and becoming.",
+    to: "/podcast",
+  },
+  {
+    icon: "ShoppingBag",
+    title: "Books & Products",
+    text: "Books, workbooks, journals and resources for your growth.",
+    to: "/books",
+  },
+];
+
 // `short` is used in the desktop top bar so all items fit on one line;
 // `label` (full) is used in the mobile menu and footer.
 export const nav = [
@@ -55,7 +114,7 @@ export const nav = [
   { label: "Unbox Your Aura", short: "Unbox Aura", to: "/unbox-your-aura" },
   { label: "30-Day Challenge", short: "Challenge", to: "/challenge" },
   { label: "Books & Products", short: "Books", to: "/books" },
-  { label: "Blogs / Confidence Nuggets", to: "/blog" },
+  { label: "Blogs / Confidence Nuggets", short: "Blogs", to: "/blog" },
   { label: "Podcast", to: "/podcast" },
   { label: "Advocacy & Leadership Career", to: "/advocacy" },
   { label: "Contact", to: "/contact" },

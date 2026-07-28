@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Mail, Phone, ArrowRight } from "lucide-react";
 import { nav, brand, services } from "../data/content";
-import { logoLight } from "../data/images";
+import { ttnLogoWhite } from "../data/images";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -22,11 +22,13 @@ export default function Footer() {
         {/* Brand */}
         <div className="lg:col-span-4">
           <Link to="/" className="flex items-center">
-            <img src={logoLight} alt="Evergreen Thecla" className="h-16 w-auto" />
+            <img src={ttnLogoWhite} alt="The Thecla Network" className="h-24 w-auto" />
           </Link>
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/65">
-            Helping people find their voice, build confidence, communicate better and
-            become the best version of themselves — on stage, online and in life.
+            The Thecla Network (TTN) is the home of everything Thecla Amarachukwu Orakwe
+            (Evergreen Thecla) does — speaking, coaching, Unbox Your Aura, the 30-Day
+            Challenge, podcast, advocacy and more — all working to inspire, empower and
+            transform.
           </p>
           <div className="mt-6 space-y-2 text-sm text-white/75">
             <a
@@ -128,9 +130,11 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="container-px flex flex-col items-center justify-between gap-4 py-6 text-center sm:flex-row sm:text-left">
-          <p className="font-display text-sm italic text-gold">{brand.tagline}</p>
+          <p className="font-display text-sm italic text-gold">
+            {brand.networkTagline} — {brand.tagline}
+          </p>
           <p className="text-xs text-white/50">
-            © {new Date().getFullYear()} Evergreen Thecla. All Rights Reserved.
+            © {new Date().getFullYear()} The Thecla Network (TTN). All Rights Reserved.
           </p>
         </div>
       </div>

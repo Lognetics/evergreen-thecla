@@ -48,8 +48,8 @@ export default function About() {
     <>
       <PageHero
         eyebrow="About"
-        title="About Thecla A. Orakwe"
-        subtitle="Speaker. Coach. Host. Spoken word artist. Advocate. A voice for confidence, communication and becoming — unapologetically."
+        title="Thecla & The Thecla Network"
+        subtitle="Speaker. Coach. Host. Spoken word artist. Advocate. Founder of The Thecla Network (TTN) — one brand for every way she helps people find their voice and become, unapologetically."
         image={portraits.feature}
         imageAlt="Thecla A. Orakwe"
       />
@@ -84,6 +84,13 @@ export default function About() {
                   in a coaching session or leading a community, her mission is the same:
                   to help people find their voice and become the fullest version of
                   themselves.
+                </p>
+                <p>
+                  Today, that work lives under one umbrella — <strong className="text-ink">The
+                  Thecla Network (TTN)</strong> — connecting her speaking, coaching, the
+                  Unbox Your Aura community, the 30-Day Challenge, spoken word, advocacy
+                  and digital products into a single network built to{" "}
+                  <em>inspire, empower and transform.</em>
                 </p>
                 <p>
                   She believes that confidence is not a personality you are born with —

@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { nav, brand } from "../data/content";
-import { logoDark, logoLight } from "../data/images";
+import { ttnMarkColor, ttnMarkWhite } from "../data/images";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -28,14 +28,30 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto flex w-full max-w-[90rem] items-center justify-between gap-3 px-5 sm:px-7">
-        <Link to="/" className="group flex shrink-0 items-center gap-2">
+        <Link to="/" className="group flex shrink-0 items-center gap-2.5">
           <img
-            src={scrolled ? logoDark : logoLight}
-            alt="Evergreen Thecla"
+            src={scrolled ? ttnMarkColor : ttnMarkWhite}
+            alt="The Thecla Network"
             className={`w-auto transition-all duration-500 ${
-              scrolled ? "h-10" : "h-11 sm:h-12"
+              scrolled ? "h-9" : "h-10 sm:h-11"
             }`}
           />
+          <span className="hidden flex-col leading-none sm:flex">
+            <span
+              className={`font-display text-[15px] font-bold tracking-tight transition-colors ${
+                scrolled ? "text-brand-deep" : "text-white"
+              }`}
+            >
+              The Thecla Network
+            </span>
+            <span
+              className={`mt-0.5 font-accent text-[8px] font-semibold uppercase tracking-[0.22em] transition-colors ${
+                scrolled ? "text-gold" : "text-gold/90"
+              }`}
+            >
+              Inspire · Empower · Transform
+            </span>
+          </span>
         </Link>
 
         <ul className="hidden items-center xl:flex">
